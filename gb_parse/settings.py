@@ -1,3 +1,12 @@
+# Scrapy settings for gb_parse project
+#
+# For simplicity, this file contains only settings considered important or
+# commonly used. You can find more settings consulting the documentation:
+#
+#     https://docs.scrapy.org/en/latest/topics/settings.html
+#     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
+#     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+
 BOT_NAME = "gb_parse_20_04_2021"
 
 SPIDER_MODULES = ["gb_parse.spiders"]

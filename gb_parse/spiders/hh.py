@@ -1,14 +1,14 @@
 import scrapy
 
-from loaders import HHLoader
-from spiders.xpaths import HH_PAGE_XPATH, HH_VACANCY_XPATH
+from gb_parse.loaders import HHLoader
+from gb_parse.spiders.xpaths import HH_PAGE_XPATH, HH_VACANCY_XPATH
 
 
 class HhSpider(scrapy.Spider):
     name = "hh"
     allowed_domains = ["hh.ru"]
     start_urls = [
-        "https://hh.ru/search/vacancy?schedule=remote&L_profession_id=0&area=113"
+        "https://krasnodar.hh.ru/search/vacancy?schedule=remote&L_profession_id=0&area=113"
     ]
 
     def _get_follow_xpath(self, response, xpath, callback):
