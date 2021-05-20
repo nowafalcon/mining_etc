@@ -14,7 +14,7 @@ def parse_params(params):
     return result
 
 
-class AvitoAutoItem(scrapy.Item):
+class AvitoItem(scrapy.Item):
     # define the fields for your item here like:
     _id = scrapy.Field()
 

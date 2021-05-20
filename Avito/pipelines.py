@@ -3,7 +3,7 @@ from scrapy.pipelines.images import ImagesPipeline
 from pymongo import MongoClient
 
 
-class AvitoAutoImagePipeline(ImagesPipeline):
+class AvitoImagePipeline(ImagesPipeline):
     def get_media_requests(self, item, info):
         if item['images']:
             for img in item['images']:
@@ -22,7 +22,7 @@ class AvitoAutoImagePipeline(ImagesPipeline):
 class MongoPipeline(object):
     def __init__(self):
         MONGO_URI = 'mongodb://172.17.0.2:27017/'
-        MONGO_DATABASE = 'avito_avto_db'
+        MONGO_DATABASE = 'avito_db'
 
         client = MongoClient(MONGO_URI)
         self.mongo_base = client[MONGO_DATABASE]

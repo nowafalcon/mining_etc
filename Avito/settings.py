@@ -1,7 +1,7 @@
-BOT_NAME = 'AvitoAuto'
+BOT_NAME = 'Avito'
 
-SPIDER_MODULES = ['AvitoAuto.spiders']
-NEWSPIDER_MODULE = 'AvitoAuto.spiders'
+SPIDER_MODULES = ['Avito.spiders']
+NEWSPIDER_MODULE = 'Avito.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -37,13 +37,13 @@ TELNETCONSOLE_ENABLED = False
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 RETRY_HTTP_CODES = [429]
 # SPIDER_MIDDLEWARES = {
-#    'AvitoAuto.middlewares.AvitoautoSpiderMiddleware': 543,
+#    'Avito.middlewares.AvitoSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'AvitoAuto.middlewares.AvitoautoDownloaderMiddleware': 543,
+#    'Avito.middlewares.AvitoDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -55,8 +55,8 @@ RETRY_HTTP_CODES = [429]
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'AvitoAuto.pipelines.AvitoAutoImagePipeline': 100,
-    'AvitoAuto.pipelines.MongoPipeline': 300,
+    'Avito.pipelines.AvitoImagePipeline': 100,
+    'Avito.pipelines.MongoPipeline': 300,
 }
 
 IMAGES_STORE = '/tmp/images'

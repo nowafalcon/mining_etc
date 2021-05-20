@@ -2,13 +2,13 @@ import scrapy
 from scrapy.http import HtmlResponse
 from scrapy.loader import ItemLoader
 
-from AvitoAuto.items import AvitoAutoItem
+from Avito.items import AvitoItem
 
 
-class AvitoAutoSpider(scrapy.Spider):
-    name = 'avito_auto'
+class AvitoSpider(scrapy.Spider):
+    name = 'avito'
     allowed_domains = ['avito.ru']
-    start_urls = ['https://www.avito.ru/kamyshin/transport']
+    start_urls = ['https://www.avito.ru/kamyshin/nedvizhimost']
 
     def parse(self, response: HtmlResponse):
         ad_links = response.css('a.styles-link-36uWZ::attr(href)')
@@ -16,7 +16,7 @@ class AvitoAutoSpider(scrapy.Spider):
             yield response.follow(link, callback=self.parse_ads)
 
     def parse_ads(self, response: HtmlResponse):
-        loader = ItemLoader(item=AvitoAutoItem(), response=response)
+        loader = ItemLoader(item=AvitoItem(), response=response)
 
         loader.add_css('title',
                        'h1.title-info-title span.title-info-title-text::text')

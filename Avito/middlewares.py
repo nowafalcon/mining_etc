@@ -1,7 +1,7 @@
 from scrapy import signals
 
 
-class AvitoautoSpiderMiddleware(object):
+class AvitoSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -49,7 +49,7 @@ class AvitoautoSpiderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class AvitoautoDownloaderMiddleware(object):
+class AvitoDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
